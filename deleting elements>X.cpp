@@ -12,9 +12,10 @@ for(int j=0;j<n;j++){
 }
 int key;
 cin>>key;
-for(int j=0;j<n;j++){
-  if(a[j]>=key){
-    a.pop_back();
+for (auto i = a.begin(); i != a.end(); ++i){
+  if(*i>=key){
+    a.erase(i);
+    i--;
   }
 }
 for(auto i:a){
