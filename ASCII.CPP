@@ -1,3 +1,18 @@
+/*Hey there help me !
+
+Deekshith just opened his laptop, but he relized that he forgot his laptop password which is 4 digital code in "# # # #" format.
+
+Now your task is to find his password, it's hard to decode it but u can decode it with the help of wallpaper As it has "D E E K" in the block .
+	INPUT : D E E K;
+	OUTPUT :5 6 6 3
+Hints :
+
+-> D ASCII value is 68 so 6+8 = 14 => 1+4 = 5
+First digit of password is 5 
+Find the next 3 digits.*/
+
+
+
 #include <bits/stdc++.h>
 using namespace std;
 int password(vector<int>&a){
