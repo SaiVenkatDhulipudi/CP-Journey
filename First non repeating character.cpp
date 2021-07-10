@@ -7,7 +7,10 @@ then the output should be ‘G’.*/
 
 #include <bits/stdc++.h>
 using namespace std;
-
+bool compare(std::pair<char ,int> i, pair<char, int> j) 
+{
+  return i.second < j.second;
+}
 int main() {
 string s;
 cin>>s;
@@ -16,10 +19,11 @@ for(int i=0;i<s.length();i++){
   m[s[i]]++;
   
 }
-
+pair<char,int>min=*min_element(m.begin(),m.end(),compare);
 for(int i=0;i<s.length();i++){
- if(m[s[i]]==1){cout<<s[i];break;}
+ if(m[s[i]]==min.second){cout<<s[i];break;}
   
 }
 
 }
+
