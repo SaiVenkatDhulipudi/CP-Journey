@@ -1,7 +1,7 @@
 /*input : 10
 output:7
 EXPLAINATION:
-NEAREST PRIME NUMBER OF 10 IS 7*/
+NEAREST LOWER BOUND PRIME NUMBER OF 10 IS 7*/
 #include <bits/stdc++.h>
 using namespace std;
 bool isprime(int k){
