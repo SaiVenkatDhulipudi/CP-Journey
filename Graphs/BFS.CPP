@@ -13,7 +13,7 @@ OUTPUT:
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long int
-void dfs(map<int,list<int>>&mp,int v,int s){
+void bfs(map<int,list<int>>&mp,int v,int s){
   vector<bool>visited(v,false);
   std::queue<int>q ;
   visited[s]=true;
@@ -44,5 +44,5 @@ int main() {
    add_edge(mp,s,d);
  }
  cin>>source;
- dfs(mp,v,source);
+ bfs(mp,v,source);
 }
