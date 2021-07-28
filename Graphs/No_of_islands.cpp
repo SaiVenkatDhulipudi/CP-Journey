@@ -30,7 +30,7 @@ void bfs(map<int,list<int>>&mp,int v,vector<bool>&visited,int s){
 }
 int BFSDIS(map<int,list<int>>&mp,int v){
   int count=0;
-  vector<bool>visited(v,false);
+  vector<bool>visited(v+1,false);
   for(int i=0;i<v;i++){
     if(visited[i]==false){
       bfs(mp,v,visited,i);
