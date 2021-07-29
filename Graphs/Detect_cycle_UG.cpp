@@ -40,6 +40,7 @@ bool dfs(int n){
 }
 void add_edge(int s,int d){
   mp[s].push_back(d); 
+  mp[d].push_back(s); 
 }
 int main() {
  int n;
