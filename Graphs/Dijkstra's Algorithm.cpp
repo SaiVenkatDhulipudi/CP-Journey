@@ -22,14 +22,14 @@ void Dijkstraalgo(int V,int s){
   for(int c=0;c<V;c++){
     int u = -1;
   for(auto i:mp){
-		if(!visited[i.first]&&(u==-1||dist[i.first]<dist[u]))
-	{
-		u=i.first;
-		visited[u] = true; 
+if(!visited[i.first]&&(u==-1||dist[i.first]<dist[u]))
+{
+u=i.first;
+visited[u] = true; 
   }
   for(auto j:mp[u]){
-			if (visited[j] == false) 
-				dist[j] = min(dist[j],dist[u]+weight[{u,j}]); 
+	if (visited[j] == false) 
+	dist[j] = min(dist[j],dist[u]+weight[{u,j}]); 
 	} 
   }
   }
