@@ -29,7 +29,7 @@ void BellmanFord(int V,int s){
      int v=j;
      int w=weight[{u,v}];
      if (dist[u]!=INT_MAX && (dist[u]+w)<dist[v]){
-				dist[v] = dist[u] + w;
+	dist[v] = dist[u] + w;
      }
    }
   }
@@ -39,9 +39,9 @@ void BellmanFord(int V,int s){
      int v=j;
      int w=weight[{u,v}];
      if (dist[u] != INT_MAX && (dist[u]+w )< dist[v]) { 
-			cout<<"Graph contains negative weight cycle"; 
-			return; 
-		}
+	cout<<"Graph contains negative weight cycle"; 
+         return; 
+	}
    }
   }
   }
