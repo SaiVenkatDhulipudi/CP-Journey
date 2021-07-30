@@ -23,16 +23,15 @@ int primsalgo(int V){
   for(int c=0;c<V;c++){
     int u = -1;
   for(int i=0;i<V;i++){
-		    if(!mSet[i]&&(u==-1||key[i]<key[u])){
-		        u=i;
-		mSet[u] = true; 
-		res+=key[u]; 
+   if(!mSet[i]&&(u==-1||key[i]<key[u])){
+   u=i;
+   mSet[u] = true; 
+   res+=key[u]; 
   }
   }
   for (int j = 0; j < V; j++) {
-
-			if (weight[{u,j}]!=0 && mSet[j] == false) 
-				key[j] = min(key[j],weight[{u,j}]); 
+    if (weight[{u,j}]!=0 && mSet[j] == false) 
+	key[j] = min(key[j],weight[{u,j}]); 
 	} 
   }
     return res;
@@ -47,10 +46,8 @@ int main(){
   cin>>V>>n;
 int s,d,w;
   for(int i=0;i<n;i++){
-    for(int j=0;j<n;j++){
       cin>>s>>d>>w;
       addedge(s,d,w);
     }
-  }
   cout<<primsalgo(V);
 }
