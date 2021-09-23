@@ -25,21 +25,19 @@ cin>>n;
 string s;
 cin>>s;
 int i=0;
-std::queue<char>q ;
-while(i<n)
-{
-  while(s[i]==s[i+1])
-  {
-    i++;
+deque<char>q ;
+q.push_back(s[0]);
+for(int i=1;i<n;i++){
+  if(q.back()!=s[i]){
+    q.push_back(s[i]);
   }
-q.push(s[i]);
-i++;
 }
 cout<<q.size()<<endl;
 while(!q.empty())
 {
   char u =q.front();
   cout<<u;
-  q.pop();
+  q.pop_front();
 }
 }
+  
