@@ -11,14 +11,14 @@ node(int x){
 };
 node *createTree(node *root,int x)
 {
-if (root ==NULL){
+if (root==NULL){
 	return new node(x);
 }
-else if(root->data<x){
-root->right=createTree(root->right, x);
+else if(x<root->data){
+	root->left=createTree(root->left, x);
 }
-else if(root->data>x){
-root->left=createTree(root->left, x);
+else if(x>root->data){
+root->right=createTree(root->right, x);
 }
 return root;
 }
@@ -39,8 +39,8 @@ if (root==NULL){
 	return;
 }
 else{
-	inorder(root->left);
-	inorder(root->right);
+	postorder(root->left);
+	postorder(root->right);
 	cout<<root->data<<" ";
 }
 }
@@ -51,16 +51,17 @@ if (root==NULL){
 }
 else{
 	cout<<root->data<<" ";
-	inorder(root->left);
-	inorder(root->right);
+	preorder(root->left);
+	preorder(root->right);
 }
 }
 int main()
 {
 int n;
 cin>>n;
-node *root=NULL;
-for( int i=0;i<n;i++){
+node *root;
+for( int i=0;i<n;i++)
+{
 	int k;
 	cin>>k;
 	root=createTree(root,k);
